@@ -1,0 +1,5 @@
+".\Objects\main.obj",
+".\Objects\Delay.obj",
+".\Objects\Key.obj" 
+TO ".\Objects\firstProject" 
+PRINT(".\Listings\firstProject.m51") RAMSIZE(256) 

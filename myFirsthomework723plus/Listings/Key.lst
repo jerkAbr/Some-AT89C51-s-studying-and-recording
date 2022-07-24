@@ -1,0 +1,60 @@
+C51 COMPILER V9.54   KEY                                                                   07/24/2022 02:56:35 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE KEY
+OBJECT MODULE PLACED IN .\Objects\Key.obj
+COMPILER INVOKED BY: D:\Keli5\C51\BIN\C51.EXE Key.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\Key.lst
+                    -) TABS(2) OBJECT(.\Objects\Key.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include <DELAY.H>
+   3          
+   4          unsigned char Key() {
+   5   1        unsigned char KeyNumber = 0;
+   6   1      
+   7   1        if (P3_1 == 0) {
+   8   2          Delay1ms(20);
+   9   2          while (P3_1 == 0);
+  10   2          Delay1ms(20);
+  11   2          KeyNumber = 1;
+  12   2          
+  13   2        } else if (P3_0 == 0) {
+  14   2          Delay1ms(20);
+  15   2          while (P3_0 == 0);
+  16   2          Delay1ms(20);
+  17   2          KeyNumber = 2;
+  18   2          
+  19   2        } else if (P3_2 == 0) {
+  20   2          Delay1ms(20);
+  21   2          while (P3_2 == 0);
+  22   2          Delay1ms(20);
+  23   2          KeyNumber = 3;
+  24   2          
+  25   2        } else if (P3_3 == 0) {
+  26   2          Delay1ms(20);
+  27   2          while (P3_3 == 0);
+  28   2          Delay1ms(20);
+  29   2          KeyNumber = 4;
+  30   2          
+  31   2        } else {
+  32   2          KeyNumber = 0; //Not press any key
+  33   2        }
+  34   1      
+  35   1        return KeyNumber;
+  36   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    108    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
